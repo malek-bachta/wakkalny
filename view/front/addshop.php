@@ -25,7 +25,6 @@ if(
     )
     {	echo 'test1';
         if(!empty($_POST["nom"])&&
-            !empty($_POST["description"])&&
             !empty($_POST["nb_stock"])&&
             !empty($_POST["prix"])&&
             !empty($_POST["image"])&&
