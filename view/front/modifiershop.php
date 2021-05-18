@@ -2,9 +2,14 @@
 session_start();
 	include "../../controller/shopC.php";
 	include_once '../../model/shop.php';
+	include "../../controller/categorieC.php";
+
 
 	$shopC = new shopC();
 	$error = "";
+	$categoriec = new categorieC();
+$listecat = $categoriec->affichercategorie();
+
 	
 	if (
 		isset($_POST["nom"]) && 
@@ -12,23 +17,27 @@ session_start();
         isset($_POST["nb_stock"]) && 
         isset($_POST["prix"])  &&
         isset($_POST["image"]) &&
-		isset($_POST['id'])
+		isset($_POST['id'])&&
+		isset($_POST["idCategorie"])
+
 	){
 		
 		if (
             !empty($_POST["nom"]) && 
-            !empty($_POST["description"]) && 
             !empty($_POST["nb_stock"])  && 
             !empty($_POST["prix"]) &&
-            !empty($_POST["image"])
-           
+            !empty($_POST["image"])&&
+			!empty($_POST["idCategorie"])
+
         ) {
             $shop = new shop(
                 $_POST['nom'],
                 $_POST['description'], 
                 $_POST['nb_stock'], 
                 $_POST['prix'], 
-                $_POST['image']
+                $_POST['image'],
+				$_POST["idCategorie"]
+
 			);
 			
             $shopC->modifiershop($shop, $_POST['id']);
@@ -100,7 +109,6 @@ session_start();
 			
 			<nav class="user-nav" role="navigation">
 				<ul>
-					<li class="light"><a href="find_recipe.php" title="Search for recipes"><i class="icon icon-themeenergy_search"></i> <span>Search for recipes</span></a></li>
 					<li class="medium"><a href="my_profile.php" title="My account"><i class="icon icon-themeenergy_chef-hat"></i> <span>My account</span></a></li>
 					<li class="dark "><a href="submit_recipe.php" title="Submit a recipe"><i class="icon icon-themeenergy_fork-spoon"></i> <span>Submit a recipe</span></a></li>
 				</ul>
@@ -175,7 +183,14 @@ session_start();
 									
 								</div>
 							</section>	
-							
+							<section>
+								<h2>Categorie</h2>
+								<select name="idCategorie">
+									<?php foreach($listecat as $row ) { ?>
+  									 	<option value="<?php echo $row['id'] ?>"><?php echo $row['nom'] ?></option>
+									<?php }; ?> 
+								</select>
+							</section>	
 							<div class="f-row full">
 								<input type="submit" class="button" id="submitshop" value="Publish shop" />
 							</div>
