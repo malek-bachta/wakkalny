@@ -169,7 +169,7 @@ if(isset($_SESSION['username']))
 						<!--item-->
 						<div class="entry one-third">
 							<figure>
-								<img name="image" src="images/<?php echo $shop['image'];?>" alt="" />
+								<img name="image" src="images/<?php echo $shop['image'];?>" alt=""  style= "Height:250px; width:270px; " />
 								<!--<figcaption><a href="recipe.php"><i class="icon icon-themeenergy_eye2"></i> <span>View recipe</span></a></figcaption>-->
 							</figure>
 							<div class="container">

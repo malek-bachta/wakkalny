@@ -179,7 +179,7 @@ $listecat = $categoriec->affichercategorie();
 							<section>
 								<h2>image</h2>
 								<div class="f-row full">
-									<input type="file" id="image" name="image" value="<?php echo $shop['image']; ?>"/>
+									<input type="file" id="image" name="image" value="<?php echo $shop['image']; ?>" required/>
 									
 								</div>
 							</section>	
