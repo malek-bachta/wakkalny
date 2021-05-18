@@ -104,7 +104,7 @@ $error=  "Missing information";
 			
 			<nav class="main-nav" role="navigation" id="menu">
 				<ul>
-					<li"><a href="index.php" title="Home"><span>Home</span></a></li>
+					<li><a href="index.php" title="Home"><span>Home</span></a></li>
 					<li><a href="recipes.php" title="Recipes"><span>Recipes</span></a>
 						
 					</li>
@@ -184,7 +184,7 @@ $error=  "Missing information";
                                 </section>
 
                                 <div class="f-row">
-                                <div class="third"><input type="text" placeholder="prix" id="prix" name="prix" /></div>
+                                <div class="third"><label for="">Price :</label><input type="text" placeholder="price" id="prix" name="prix" /></div>
 									
 									
 								</div>
@@ -194,7 +194,7 @@ $error=  "Missing information";
 
 								<div class="f-row">
                                 
-									<div class="third"><input type="text" placeholder="nb_stock" id="nb_stock" name="nb_stock" /></div>
+									<div class="third"><label for="">nb_stock :</label><input type="NUMBER"  id="nb_stock" name="nb_stock" /></div>
 									
 								</div>
 							
