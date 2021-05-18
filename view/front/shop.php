@@ -318,12 +318,7 @@ if(isset($_SESSION['username']))
 					<li><a href="contact.php" title="Contact"><span>Contact</span></a></li>
 
 					<li  class="current-menu-item"><a href="shop.php" title="Shop" ><span>Shop</span></a> 
-					<ul>
-						<li><a href="addshop.php" title="Add shop">add shop</a></li>
-						<li><a href="addcategoriep.php" title="add category">add category</a></li>
-
-
-					</ul>
+					
 					</li>
 
 
