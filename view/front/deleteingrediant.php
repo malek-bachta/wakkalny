@@ -6,7 +6,7 @@
 	
 	if (isset($_POST["id"])){
 		$ingrediantc->supprimeringrediant($_POST["id"]);
-		header('Location:recipe.php');
+		header('Location:recipes.php');
 	}
 
 ?>

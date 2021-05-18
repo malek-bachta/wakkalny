@@ -173,11 +173,17 @@ else {
 								</div>
 								<div class="f-row">
 								
-									<div class="third"><label for="">Preparation Time :</label><input type="text" placeholder="Preparation time"  name="prept" id="prept" required /></div>
+									<div class="third"><label for="">Preparation Time :</label><input type="number" placeholder="Preparation time"  name="prept" id="prept" required /></div>
 									
-									<div class="third"><label for="">Cooking Time :</label><input type="text"  placeholder="Cooking time" id="cookingt" name="cookingt" required  /></div>
+									<div class="third"><label for="">Cooking Time :</label><input type="nubmer"  placeholder="Cooking time" id="cookingt" name="cookingt" required  /></div>
 									
-									<div class="third"><label for="">Difficulty :</label><input type="text"  placeholder="Difficulty" id="difficulty"  name="difficulty" required /></div>
+									<div class="third"><label for="">Difficulty :</label>
+									<select type="text"  placeholder="Difficulty" id="difficulty"  name="difficulty" required >
+									<option>easy</option>
+									<option>average</option>
+									<option>hard</option>
+									</select>
+									</div>
 								</div>
 								<div class="f-row">
 									<div class="third"><label for="">Number of Serving :</label><input type="text"  placeholder="Serves how many people?" id="nb_ppl" name="nb_ppl" required  /></div>

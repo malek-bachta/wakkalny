@@ -160,5 +160,15 @@
                             $e->getMessage();
                         }
                     }
+
+                    function rechercher ($mot){
+		
+                      $q = array('motclef' => $mot. '%' );
+                      $sqlQuery = "SELECT * FROM blog WHERE titre like :motclef";
+                      $db=config::getConnexion();
+                      $liste=$db->prepare($sqlQuery);
+                      $liste->execute($q);
+                      return $liste;	
+                    }
   }
 ?>

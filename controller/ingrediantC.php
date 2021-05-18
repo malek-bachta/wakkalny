@@ -90,12 +90,7 @@
 			echo 'test modif C' ;
 			  $db = config::getConnexion();
 			  $query = $db->prepare(
-				'UPDATE ingrediants SET                     
-				
-				 nom=:nom,
-				 
-				quantite=:quantite 	
-				WHERE id = :id '
+				'UPDATE ingrediants SET id=:id, nom=:nom, quantite=:quantite WHERE id = :id '
 			  );
 		
 			  

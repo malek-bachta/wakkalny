@@ -4,9 +4,9 @@ include '../../controller/ingrediantC.php';
 
 
 $error = "";
-
 $ingrediantC = new ingrediantC();
 
+$id = isset($_GET['idrecette']) ? $_GET['idrecette'] : '';
 
 
     if ( 
@@ -16,10 +16,12 @@ $ingrediantC = new ingrediantC();
         $ingrediant1 = new ingrediants(
            
             $_POST["nom"],
-			$_POST["quantite"]
+			$_POST["quantite"],
+			$_POST["user"],
+			$_POST["id"]
         );
         $ingrediantC->modifieringrediant($ingrediant1, $_GET['id']);   
-             header('location:recipe.php?idrecette='.$recette['idrecette']);
+             header('location:recipes.php');
 	}
 
     else
@@ -125,10 +127,15 @@ $ingrediantC = new ingrediantC();
 								<p>All fields are required.</p>
 								
 								<div class="f-row">
-									<div class="third"><input type="text" placeholder="nom"  name="nom" id="nom"  value = "<?php echo $ingrediant1['nom'];?>"/></div>
-									<div class="third"><input type="text" placeholder="quantite"  name="quantite" id="quantite"  value = "<?php echo $ingrediant1['quantite'];?>" /></div>
+								<div class="f-row">
+									<div class="third"><input type="hidden"  id="id" name="id" value="<?php echo $ingrediant1['id'];?>" /></div>
 								</div>
-							
+									<div class="third"><input type="text" placeholder="nom"  name="nom" id="nom"  value = "<?php echo $ingrediant1['nom'];?>"/></div>
+									<div class="third"><input type="number" placeholder="quantite"  name="quantite" id="quantite"  value = "<?php echo $ingrediant1['quantite'];?>" /></div>
+								</div>
+								<div class="f-row">
+									<div class="third"><input type="hidden"  id="user" name="user" value="<?php echo $ingrediant1['user'];?>" /></div>
+								</div>
 							
 						
 							

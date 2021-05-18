@@ -135,6 +135,7 @@ if(isset($_POST['recherche'])){
 					<div class="entries row">
 						<?php
 						foreach ($listerecette as $recette ){
+							$user=$recettec->getUserbyname($_SESSION['username']);
 
 							if($user['id'] != $recette['user'])
 						{
@@ -152,7 +153,7 @@ if(isset($_POST['recherche'])){
 								<div class="actions">
 									<div>
 										<div class="difficulty">
-											<i class="ico i-hard"></i><a href="#"><?php echo $recette['difficulty']; ?></a>
+											<i class="ico i-hard"></i><?php echo $recette['difficulty']; ?>
 										</div>
 
 										
@@ -175,11 +176,11 @@ if(isset($_POST['recherche'])){
 								<figcaption><?php echo "<a href=recipe.php?idrecette=".$recette['idrecette'].">" ; ?>  <i class="icon icon-themeenergy_eye2"></i> <span>View recipe</span></a></figcaption>
 							</figure>
 							<div class="container">
-								<h2><a href="recipe.php"><?php echo $recette['titre']; ?></a></h2> 
+								<h2><?php echo "<a href=recipe.php?idrecette=".$recette['idrecette'].">" ; ?>  <?php echo $recette['titre']; ?></a></h2> 
 								<div class="actions">
 									<div>
 										<div class="difficulty">
-											<i class="ico i-hard"></i><a href="#"><?php echo $recette['difficulty']; ?></a>
+											<i class="ico i-hard"></i><?php echo $recette['difficulty']; ?>
 										</div>
 
 										<form method="POST" action="deleterecette.php">

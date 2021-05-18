@@ -5,7 +5,10 @@ include "../../controller/blogC.php";
 $blogc = new blogC();
 $listeblogs=$blogc->afficherblog();
 
-
+if(isset($_POST['search'])){
+	$mot = $_POST['search'];
+	$listeblogs = $blogc->rechercher($mot);
+}
 
 ?>
 
@@ -64,8 +67,8 @@ $listeblogs=$blogc->afficherblog();
                 </div>
                 <ul class="nav navbar-top-links navbar-left m-l-20 hidden-xs">
                     <li>
-                        <form role="search" class="app-search hidden-xs">
-                            <input type="text" placeholder="Search..." class="form-control"> <a href=""><i
+                        <form method="post" role="search" class="app-search hidden-xs">
+                            <input name="search" type="text" placeholder="Search..." class="form-control"> <a href=""><i
                                     class="fa fa-search"></i></a>
                         </form>
                     </li>
