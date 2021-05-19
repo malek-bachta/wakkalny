@@ -12,7 +12,10 @@ $blogc = new blogC();
 $listeblogs=$blogc->afficherblog();
 
 
-
+if(isset($_POST['search'])){
+	$mot = $_POST['search'];
+	$listeblogs = $blogc->rechercher($mot);
+}
 
 ?>
 
@@ -131,11 +134,14 @@ $listeblogs=$blogc->afficherblog();
 				<header class="s-title">
 					<h1>Blog</h1>
 				</header>
-
+				<h1 style="text-align: center"> Search for a Blog </h1>
+			<form method="POST">
+                <input type="text" name="search" id="recherche" placeholder="Search for blog.."  class="form-control round-form" onblur="submit();" > 
+            </form>
 				</section>
 
 				<!--content-->
-				<section class="content three-fourth">
+				<br><section class="content three-fourth">
 					  
 				<!--blog entry-->
 				

@@ -94,7 +94,7 @@ echo  " &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp
                                                     <div><b> </b></div>
                                                     <div><b>Nom commercial: </b> <?PHP echo  "Wakkalny"; ?></div>
                                                     <div><b>ADRESSE:</b> <?PHP echo "Tunis"; ?> </div>
-                                                    <div><b>TELEPHONE:</b> <?PHP echo "222222222"; ?></div>
+                                                    <div><b>TELEPHONE:</b> <?PHP echo "52717009"; ?></div>
 
                                                 </td>
                                                 <td style="width: 20%"></td>

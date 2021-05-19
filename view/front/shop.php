@@ -388,7 +388,8 @@ if(isset($_SESSION['username']))
 										<div class="difficulty"><a > <?php echo $shop['nom'];?></a></div>
 										<div class="likes"><a > <?php echo $shop['prix'];?></a></div>
 										<div class="comments"> <a><?php echo $shop['nb_stock'];?></a></div> 
-										
+										<div><a class="btn btn-primary btn-lg btn-block" href=" ../../controller/ajoutpanier.php?id=<?PHP echo $shop['id']; ?>" style="float:right;"  class="btn btn-danger btn-xs">
+								AddToCart</a class="btn btn-primary height-auto btn-sm"></div>
 								 <div>
 									 
 								 

@@ -1,4 +1,5 @@
 <?php
+session_start();
 include "../../controller/recetteC.php";
 
 $recettec = new recetteC();
@@ -26,7 +27,7 @@ if(isset($_POST['tri'])){
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
+<head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -86,9 +87,13 @@ if(isset($_POST['tri'])){
                     </ul>
                     <ul class="nav navbar-top-links navbar-right pull-right">
                         <li>
-                            <a class="profile-pic" href="#"> <img src="plugins/images/users/varun.jpg" alt="user-img" width="36" class="img-circle"><b class="hidden-xs">admin</b> </a>
+                        <a class="profile-pic" href="profile.php">  <i class="fa fa-user fa-fw" aria-hidden="true"></i><b class="hidden-xs"><?php echo $_SESSION['username']; ?></b> </a>
+                        </li>
+                        <li>
+                        <a class="profile-pic" href="../front/logout.php"> <b class="hidden-xs">logout</b> </a>
                         </li>
                     </ul>
+
                 </div>
                 <!-- /.navbar-header -->
                 <!-- /.navbar-top-links -->
@@ -106,7 +111,7 @@ if(isset($_POST['tri'])){
                             <a href="profile.php" class="waves-effect"><i class="fa fa-user fa-fw"
                                     aria-hidden="true"></i><span class="hide-menu">Profile</span></a>
                         </li>
-                        
+                       
                         <li>
                             <a href="Users.php" class="waves-effect"><i class="fa fa-users fa-fw"
                                     aria-hidden="true"></i><span class="hide-menu">Users</span></a>
@@ -139,9 +144,8 @@ if(isset($_POST['tri'])){
                         
                     </ul>
                     <div class="center p-20">
-                        <span class="hide-menu"><a href="" target="_blank"
-                                class="btn btn-danger btn-block btn-rounded waves-effect waves-light">Upgrade to
-                                Pro</a></span>
+                    <span class="hide-menu"><a href="../front" target="_blank" class="btn btn-danger btn-block btn-rounded waves-effect waves-light">Back to Wakkalny</a></span>
+
                     </div>
                 </div>
             </div>
@@ -151,15 +155,12 @@ if(isset($_POST['tri'])){
             <div class="container-fluid">
                 <div class="row bg-title">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h4 class="page-title">Basic Table</h4>
+                        <h4 class="page-title">Recipes Table</h4>
                     </div>
-                    <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12"> <a
-                            href="http://wrappixel.com/templates/pixeladmin/" target="_blank"
-                            class="btn btn-danger pull-right m-l-20 btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light">Upgrade
-                            to Pro</a>
+                    <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12"> 
                         <ol class="breadcrumb">
                             <li><a href="#">Dashboard</a></li>
-                            <li class="active">Basic Table</li>
+                            <li class="active">Recipes Table</li>
                         </ol>
                     </div>
                     <!-- /.col-lg-12 -->
@@ -168,7 +169,7 @@ if(isset($_POST['tri'])){
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="white-box">
-                            <h3 class="box-title">Basic Table</h3>
+                            <h3 class="box-title">Recipes Table</h3>
                             <p class="text-muted">Add class <code>.table</code></p>
                             <div class="table-responsive">
                                 <table class="table">
