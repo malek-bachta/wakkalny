@@ -85,6 +85,8 @@ if(isset($_SESSION['username']))
 					
 					<li><a href="contact.php" title="Contact"><span>Contact</span></a></li>
 					<li><a href="shop.php" title="Shop"><span>Shop</span></a></li>
+					<li><a href="panier.php" title="Shop" ><span>Cart</span></a></li>
+
 				</ul>
 			</nav>
 			
@@ -139,7 +141,7 @@ foreach ($result as $recette) { ?>
 								<!--two-third-->
 								<article class="two-third">
 
-									<div class="photo"><a href="#"><img src=" images/<?php echo $recette ['photo']; ?> "  /></a></div>
+									<div class="photo"><a href="#"><img src=" images/<?php echo $recette ['photo']; ?> "  Style="height:500px; width:800px;" /></a></div>
 									<div class="intro"><p><strong><?php echo $recette ['description']; ?></p></div>
 									
 							
@@ -166,17 +168,27 @@ foreach ($result as $recette) { ?>
 										
 									</dl>
 
-        <?php 
+       
+	   <?php 
+		
 		foreach ($listingrediant as $ingrediants)
 		 { 
 			 if($id == $ingrediants['user']){
 			?>
-									<dl class="ingredients">
-										<dt><?php echo $ingrediants ['nom']; ?></dt>
-										<dd><?php echo $ingrediants ['quantite']; ?></dd>
-					<form method="POST" action="deleteingrediant.php">
-                    <input type="submit" name="supprimer" value="supprimer">
-	                <input type="hidden" value="<?PHP echo $ingrediants ['id']; ?>" name="id">
+							
+							
+
+							<dl class="basic">
+									
+									<dt><?php echo $ingrediants ['nom']; ?></dt>
+										<dt style="background-color: #F4716A"><?php echo $ingrediants ['quantite']; ?></dt>
+					
+										<form method="POST" action="deleteingrediant.php">
+                   
+					<input type="submit" name="supprimer" value="supprimer">
+	               
+					<input type="hidden" value="<?PHP echo $ingrediants ['id']; ?>" name="id">
+					
 					<a href="modifieringrediant.php?id=<?php echo $ingrediants['id'];?>">Modifier</a>
 
 	
@@ -281,7 +293,7 @@ foreach ($result as $recette) { ?>
 								<!--two-third-->
 								<article class="two-third">
 
-									<div class="photo"><a href="#"><img src=" images/<?php echo $recette ['photo']; ?>"  /></a></div>
+									<div class="photo"><a href="#"><img src=" images/<?php echo $recette ['photo']; ?>"   Style="height:500px; width:800px;"/></a></div>
 									<div class="intro"><p><strong><?php echo $recette ['description']; ?></p></div>
 									
 								</article>

@@ -119,7 +119,8 @@ $error=  "Missing information";
 							<li><a href="addshop.php" title="Add shop">add shop</a></li>
 							<li><a href="addcategoriep.php" title="Add category">add category </a></li>
 						</ul>
-				
+						<li><a href="panier.php" title="Shop" ><span>Cart</span></a></li>
+
 				
 				
 				</a>

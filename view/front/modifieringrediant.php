@@ -78,6 +78,8 @@ $id = isset($_GET['idrecette']) ? $_GET['idrecette'] : '';
 					
 					<li><a href="contact.php" title="Contact"><span>Contact</span></a></li>
 					<li><a href="shop.php" title="Shop"><span>Shop</span></a></li>
+					<li><a href="panier.php" title="Shop" ><span>Cart</span></a></li>
+
 				</ul>
 			</nav>
 			

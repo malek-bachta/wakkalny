@@ -30,16 +30,19 @@ if(isset($_POST['login']))
         
 			if($userc->checklogin($username,$mdp))
 			{
-				
-			$_SESSION['id']=$_POST['id'];
-			$_SESSION['username']=$_POST['username'];
-			$_SESSION['nom']=$_POST['nom'];
-			$_SESSION['prenom']=$_POST['prenom'];
-			$_SESSION['adresse']=$_POST['adresse'];
-			$_SESSION['tel']=$_POST['tel'];
-			$_SESSION['email']=$_POST['email'];
-			$_SESSION['role']=$_POST['role'];
-			$_SESSION['mdp']=$_POST['mdp'];
+				$Logedin = $userc->Logedin(
+					($_POST["username"]),
+					($_POST["mdp"])
+			);
+			$_SESSION['id']=$Logedin['id'];
+			$_SESSION['username']=$Logedin['username'];
+			$_SESSION['nom']=$Logedin['nom'];
+			$_SESSION['prenom']=$Logedin['prenom'];
+			$_SESSION['adresse']=$Logedin['adresse'];
+			$_SESSION['tel']=$Logedin['tel'];
+			$_SESSION['email']=$Logedin['email'];
+			$_SESSION['role']=$Logedin['role'];
+			$_SESSION['mdp']=$Logedin['mdp'];
 
 					header('Location:index.php');
 

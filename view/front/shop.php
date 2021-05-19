@@ -112,7 +112,7 @@ if(isset($_SESSION['username']))
 
 
 					</ul>
-					</li>
+					<li><a href="panier.php" title="Shop" ><span>Cart</span></a></li>
 
 
 
@@ -182,6 +182,8 @@ if(isset($_SESSION['username']))
 										<div><form method="POST" action="supprimershop.php">
 						                <input type="submit" name="supprimer" value="supprimer">
 						               <input type="hidden" value="<?PHP echo $shop['id']; ?>" name="id">
+									   <div><a class="btn btn-primary btn-lg btn-block" href=" ../../controller/ajoutpanier.php?id=<?PHP echo $shop['id']; ?>" style="float:right;"  class="btn btn-danger btn-xs">
+								AddToCart</a class="btn btn-primary height-auto btn-sm"></div>
 						          </form>      
 					             </div>
 								 <div>
@@ -318,6 +320,8 @@ if(isset($_SESSION['username']))
 					<li><a href="contact.php" title="Contact"><span>Contact</span></a></li>
 
 					<li  class="current-menu-item"><a href="shop.php" title="Shop" ><span>Shop</span></a> 
+					<li><a href="panier.php" title="Shop" ><span>Cart</span></a></li>
+
 					
 					</li>
 

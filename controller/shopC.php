@@ -117,6 +117,20 @@
 			}
 		}
 
+		function recuperershops($id)
+		{ 
+		   
+			$sql="SELECT * from shop where id=$id";    
+			$db= config::getConnexion();
+			try{
+				$liste = $db->query($sql);
+				return $liste;
+			}
+			catch(Exception $e){
+				die('Erreur: '. $e->getMessage());
+			}
+	
+		}
 		function recuperershop1($id){
 			$sql="SELECT * from shop where id=$id";
 			$db = config::getConnexion();

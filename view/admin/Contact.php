@@ -122,8 +122,8 @@ $listecontact=$contactc->showcontact();
                                     aria-hidden="true"></i><span class="hide-menu">Classes</span></a>
                         </li>
                         <li>
-                            <a href="Orders.html" class="waves-effect"><i class="fa fa-reorder (alias) fa-fw"
-                                    aria-hidden="true"></i><span class="hide-menu">Orders</span></a>
+                            <a href="Orders.php" class="waves-effect"><i class="fa  fa-money fa-fw"
+                                    aria-hidden="true"></i><span class="hide-menu">Coupon</span></a>
                         </li>
                         <li>
                             <a href="Products.php" class="waves-effect"><i class="fa fa-shopping-cart fa-fw"

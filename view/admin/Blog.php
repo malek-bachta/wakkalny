@@ -120,7 +120,7 @@ if(isset($_POST['search'])){
                                 aria-hidden="true"></i><span class="hide-menu">Classes</span></a>
                     </li>
                     <li>
-                        <a href="Orders.html" class="waves-effect"><i class="fa fa-reorder (alias) fa-fw"
+                        <a href="Orders.php" class="waves-effect"><i class="fa fa-reorder (alias) fa-fw"
                                 aria-hidden="true"></i><span class="hide-menu">Orders</span></a>
                     </li>
                     <li>

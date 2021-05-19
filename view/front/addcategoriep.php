@@ -91,6 +91,7 @@ $error=  "Missing information";
 						<ul>
 							
 							<li><a href="addshop.php" title="Add shop">add shop</a></li>
+							<li><a href="panier.php" title="Shop" ><span>Cart</span></a></li>
 
 						</ul>
 					

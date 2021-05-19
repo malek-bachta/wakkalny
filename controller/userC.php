@@ -38,9 +38,15 @@
             $sql = "SELECT * FROM user WHERE username='$username' && mdp='$mdp'";
 
             $db = config::getConnexion();
-    
-            $logedin = $db->query($sql);
-            return $logedin->fetchAll();
+			try{
+				$query=$db->prepare($sql);
+				$query->execute();
+				$result=$query->fetch();
+				return $result;
+			}
+			catch (Exception $e){
+				die('Erreur: '.$e->getMessage());
+			}
         }
 
 
