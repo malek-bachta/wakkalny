@@ -68,7 +68,7 @@ if(isset($_POST['search'])){
                 <ul class="nav navbar-top-links navbar-left m-l-20 hidden-xs">
                     <li>
                         <form method="post" role="search" action="Blog.php" class="app-search hidden-xs">
-                        <input type="text" name="recherche" id="recherche" placeholder="Search for blog.."  class="form-control round-form" onblur="submit();" > 
+                        <input type="text" name="search" id="recherche" placeholder="Search for blog.."  class="form-control round-form" onblur="submit();" > 
 
                         </form>
                     </li>
