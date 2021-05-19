@@ -97,7 +97,7 @@ $core=new shopC();
 					</li>
 										
 										
-					<li class="current-menu-item"><a href="contact.php" title="Contact"><span>Contact</span></a></li>
+					<li ><a href="contact.php" title="Contact"><span>Contact</span></a></li>
 					<li><a href="shop.php" title="Shop"><span>Shop</span></a>
 					<li><a href="panier.php" title="Shop" ><span>Cart</span></a></li>
 
